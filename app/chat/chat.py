@@ -1,6 +1,7 @@
 import openai
 import requests
 import json
+import traceback
 from typing import List, Dict
 import uuid
 from .plugins.plugin import PluginInterface
@@ -136,7 +137,8 @@ class ChatSession:
             self.conversation.add_message("assistant", chatgpt_message)
             return chatgpt_message
         except Exception as e:
-            print(e)
+            traceback.print_exc() # Print full traceback
+            # print(e)
             return "something went wrong"
 
 
@@ -154,6 +156,7 @@ class ChatSession:
                 headers=headers,
                 json=json_data,
             )
+            print("OpenAI Response:", response.json()) # Debug line
             return response.json()["choices"][0]["message"]
         except Exception as e:
             print("Unable to generate ChatCompletion response")

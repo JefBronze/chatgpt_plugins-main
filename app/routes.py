@@ -5,9 +5,11 @@ from flask import Flask
 import os
 from dotenv import load_dotenv
 from .chat.chat import ChatSession
+import openai
 
 load_dotenv()
 app = Flask(__name__)
+openai.api_key = os.getenv('OPENAI_API_KEY')
 app.secret_key = os.getenv("CHAT_APP_SECRET_KEY")
 
 
@@ -20,7 +22,9 @@ def index():
 
 @app.route('/chat', methods=['POST'])
 def chat():
+    print("Chat endpoint called") # Debug line
     message: str = request.json['message']
+    print("User message:", message) # Debug line
     chat_session = _get_user_session()
     chatgpt_message = chat_session.get_chatgpt_response(message)
     return jsonify({"message": chatgpt_message})
