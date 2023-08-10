@@ -2,6 +2,8 @@ flask --app run.py run
 
 python -m venv venv2 //Criação de novo ambiente virtual.
 
+export OPENAI_API_KEY=
+
 .\venv2\Scripts\activate ou activate
 
 deactivate
