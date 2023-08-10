@@ -1,6 +1,8 @@
 flask --app run.py run
 
-.\venv\Scripts\activate ou activate
+python -m venv venv2 //Criação de novo ambiente virtual.
+
+.\venv2\Scripts\activate ou activate
 
 deactivate
 
