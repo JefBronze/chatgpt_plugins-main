@@ -1,8 +1,4 @@
-flask --app run.py run
-
-.\venv\Scripts\activate ou activate
-
-deactivate
+python3 run.py
 
 https://codeconfessions.substack.com/p/creating-chatgpt-plugins-using-the#:~:text=The%20function%20call%20feature%20of%20the%20ChatGPT%20API%20allows%20users,help%20to%20perform%20its%20task.
 
