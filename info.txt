@@ -1,5 +1,12 @@
 python3 run.py
 
+export OPENAI_API_KEY=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
+
+git checkout -b new-branch-name
+git add .
+git commit -m "Description of changes"
+git push origin new-branch-name
+
 https://codeconfessions.substack.com/p/creating-chatgpt-plugins-using-the#:~:text=The%20function%20call%20feature%20of%20the%20ChatGPT%20API%20allows%20users,help%20to%20perform%20its%20task.
 
 https://github.com/abhinav-upadhyay/chatgpt_plugins
