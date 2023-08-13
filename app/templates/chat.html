@@ -90,9 +90,9 @@
 
         function translateRole(role) {
           if (role == "user") {
-            return "You";
+            return "Utilisateur";
           }
-          return "ChatGPT";
+          return "Chatbot";
         }
 
         function renderMessage(sender, message) {
@@ -141,7 +141,7 @@
         function submitMessage() {
         const message = messageInput.value.trim();
         if (message !== '') {
-          renderMessage('You', message);
+          renderMessage('Utilisateur', message);
           messageInput.value = '';
           showThrobber(); // Show the throbber before making the API call
 
@@ -156,7 +156,7 @@
             .then(response => response.json())
             .then(data => {
               const responseMessage = data.message;
-              renderMessage('ChatGPT', responseMessage);
+              renderMessage('Chatbot', responseMessage);
             })
             .catch(error => {
               console.error('Error:', error);
