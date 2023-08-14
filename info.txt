@@ -2,8 +2,7 @@ python3 run.py
 
 export OPENAI_API_KEY=
 
-sudo docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_h
-ome jenkins/jenkins:lts
+sudo docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 
 git checkout -b new-branch-name
 git add .
