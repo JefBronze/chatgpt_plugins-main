@@ -1,0 +1,169 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/chatgpt_plugins-main/run.py", line 1, in <module>
+    from app.routes import app
+  File "/home/ubuntu/chatgpt_plugins-main/app/routes.py", line 1, in <module>
+    from flask import Flask, render_template, request, session, jsonify
+ModuleNotFoundError: No module named 'flask'
+ * Serving Flask app 'app.routes'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.42.190:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 135-519-993
+127.0.0.1 - - [16/Aug/2023 14:23:05] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 14:23:09] "[36mGET /static/img/throbber.gif HTTP/1.0[0m" 304 -
+127.0.0.1 - - [16/Aug/2023 14:23:10] "POST /chat HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 14:26:39] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 14:26:40] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 14:26:42] "[36mGET /static/img/throbber.gif HTTP/1.0[0m" 304 -
+127.0.0.1 - - [16/Aug/2023 14:26:44] "POST /chat HTTP/1.0" 200 -
+ * Serving Flask app 'app.routes'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.42.190:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 279-378-567
+127.0.0.1 - - [16/Aug/2023 14:42:15] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 14:42:17] "[36mGET /static/img/throbber.gif HTTP/1.0[0m" 304 -
+127.0.0.1 - - [16/Aug/2023 14:42:18] "POST /chat HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 15:16:57] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 16:24:01] "[33mGET /.git/config HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:02] "[33mGET /core/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:02] "[33mPOST /core/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:02] "[33mGET /cms/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:02] "[33mPOST /cms/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:02] "[33mGET /.env.production HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:02] "[33mPOST /.env.production HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:02] "[33mGET /.env.project HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:03] "[33mPOST /.env.project HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:03] "[33mGET /docker/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:03] "[33mPOST /docker/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:03] "[33mGET /enviroments/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:03] "[33mPOST /enviroments/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:03] "[33mGET /application/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:03] "[33mPOST /application/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:03] "[33mGET /shared/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:04] "[33mPOST /shared/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:04] "[33mGET /cp/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:04] "[33mPOST /cp/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:04] "[33mGET /sources/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:04] "[33mPOST /sources/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:04] "[33mGET /live_env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:04] "[33mPOST /live_env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:04] "[33mGET /.env.development HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:05] "[33mPOST /.env.development HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:05] "[33mGET /fedex/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:05] "[33mPOST /fedex/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:05] "[33mGET /enviroments/.env.production HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:05] "[33mPOST /enviroments/.env.production HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:05] "[33mGET /.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:05] "[33mPOST /.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:05] "[33mGET /system/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:06] "[33mPOST /system/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:06] "[33mGET /local/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:06] "[33mPOST /local/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:06] "[33mGET /private/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:06] "[33mPOST /private/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:06] "[33mGET /laravel/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:06] "[33mPOST /laravel/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:07] "[33mGET /rest/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:07] "[33mPOST /rest/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:07] "[33mGET /.env.save HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:07] "[33mPOST /.env.save HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:07] "[33mGET /development/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:07] "[33mPOST /development/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:07] "[33mGET /script/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:07] "[33mPOST /script/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:08] "[33mGET /back/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:08] "[33mPOST /back/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:08] "[33mGET /api/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:08] "[33mPOST /api/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:08] "[33mGET /.env.prod HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:08] "[33mPOST /.env.prod HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:08] "[33mGET /.env.old HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:08] "[33mPOST /.env.old HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:09] "[33mGET /admin-app/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:09] "[33mPOST /admin-app/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:09] "[33mGET /apps/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:09] "[33mPOST /apps/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:09] "[33mGET /.env.dist HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:09] "[33mPOST /.env.dist HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:09] "[33mGET /app/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:09] "[33mPOST /app/.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:10] "[33mGET /frontend_dev.php/$ HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:10] "[33mGET /debug/default/view?panel=config HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:10] "[33mGET /.json HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:10] "[33mGET /config.json HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:10] "[33mGET /phpinfo.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:10] "[33mGET /info.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:10] "[33mGET /_profiler/phpinfo HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:24:10] "GET /?phpinfo=1 HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 16:32:23] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 16:32:24] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:32:26] "GET /static/img/throbber.gif HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 16:32:26] "POST /chat HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 16:58:58] "[33mGET /phpMyAdmin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:58:58] "[33mGET /phpmyadmin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:58:59] "[33mGET /phpMyAdmin-2.11.4/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:58:59] "[33mGET /phpMyAdmin-2.11.3/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:00] "[33mGET /phpMyAdmin-2.10.0.2/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:00] "[33mGET /phpMyAdmin-2.10.3/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:01] "[33mGET /phpMyAdmin-2.8.0.2/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:01] "[33mGET /phpMyAdmin-2.10.2/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:02] "[33mGET /phpMyAdmin-2.11.9.2/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:02] "[33mGET /phpMyAdmin-2.11.0/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:03] "[33mGET /phpMyAdmin-2.11.7/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:03] "[33mGET /phpMyAdmin-2.11.1.2/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:04] "[33mGET /pma/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:04] "[33mGET /phpMyAdmin3/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:05] "[33mGET /myadmin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:05] "[33mGET /MyAdmin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:06] "[33mGET /PHPMYADMIN/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:06] "[33mGET /mysqladmin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:07] "[33mGET /SQL/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:07] "[33mGET /phpMyAdmin-2.5.5-pl1/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:08] "[33mGET /phpMyAdmin-2.5.5/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:08] "[33mGET /phpMyAdmin-2.5.4/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:09] "[33mGET /phpMyAdmin-2.5.7-pl1/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:09] "[33mGET /admin/pma/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:10] "[33mGET /phpMyAdmin-2/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:10] "[33mGET /web/phpMyAdmin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:10] "[33mGET /webadmin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:11] "[33mGET /admin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:11] "[33mGET /dbadmin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:12] "[33mGET /mysql/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:12] "[33mGET /phpMyAdmin2/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:13] "[33mGET /phpma/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:13] "[33mGET /sqlweb/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:14] "[33mGET /webdb/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:14] "[33mGET /websql/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:15] "[33mGET /_phpMyAdmin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:15] "[33mGET /php/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:16] "[33mGET /admin/phpmyadmin/scripts/setup.txt HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:16] "[33mGET /db/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:17] "[33mGET /sqlmanager/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:17] "[33mGET /mysqlmanager/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:18] "[33mGET /phpmanager/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:18] "[33mGET /php-myadmin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:19] "[33mGET /phpmy-admin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 16:59:19] "[33mGET /mysql-admin/scripts/setup.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 18:00:05] "[33mGET /client/get_targets HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 18:00:05] "[33mGET /upl.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 18:00:06] "[33mGET /geoip/ HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 18:00:07] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 18:00:07] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 18:00:07] "[33mGET /1.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 18:00:08] "[33mGET /bundle.js HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 18:00:08] "[33mGET /files/ HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 18:00:09] "[33mGET /systembc/password.php HTTP/1.0[0m" 404 -
+127.0.0.1 - - [16/Aug/2023 19:31:35] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 19:31:35] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2023 19:31:35] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -

@@ -1,19 +1,95 @@
-python3 run.py
+Clone repository from a specific branch:
+  git clone -b branch_name --single-branch https://repository.git
 
-source venv/bin/activate
+Update Ubuntu:
+  sudo apt-get update
 
-ps aux | grep gunicorn
-kill -9 PID
+Install pip on Ubuntu:
+  sudo apt-get install python3-pip
 
-export OPENAI_API_KEY=
+Install a virtual environment in Python on Ubuntu:
+  sudo apt install python3-virtualenv
 
+Create a virtual environment in Python on Ubuntu:
+  virtualenv venv
+
+Activate the virtual Environment:
+  source venv/bin/activate
+
+Deactivate the virtual Environment:
+  deactivate
+
+Install packages in the virtual environment:
+pip install openai --upgrade
+  pip install flask requests python-dotenv
+  pip install bs4
+
+Requirements.txt:
+  openai --upgrade
+  flask
+  requests
+  python-dotenv
+  bs4
+
+Install packages from requirements.txt:
+  pip install -r requirements.txt
+
+Create a .env with:
+  OPEN_AI_KEY="<your OPENAI API key here>"
+  BRAVE_API_KEY="<your Brave API key here>"
+  CHAT_APP_SECRET_KEY=“<your APP SECRET KEY key here>"
+
+Run chatbot from command line:
+  python3 run.py
+
+Git push to a new branch:
+  git checkout -b new-branch-name
+  git add .
+  git commit -m "Description of changes"
+  git push origin new-branch-name
+
+Install Nginx:
+  sudo apt-get update
+  sudo apt-get install nginx
+
+Create a new Nginx configuration file:
+  sudo vim /etc/nginx/sites-available/chatbot
+
+Insert this content on it:
+server {
+listen 80;
+server_name “<Replace with IP_PUBLIC>”;
+location / {
+proxy_pass http://127.0.0.1:5000;
+proxy_set_header Host $host;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+}
+}
+
+Create a symbolic link to the sites-enabled directory:
+  sudo ln -s /etc/nginx/sites-available/chatbot /etc/nginx/sites-enabled
+
+Test the configuration:
+  sudo nginx -t
+
+Restart Nginx:
+  sudo systemctl restart nginx
+
+Keep chatbot running on the background and after log out:
+  nohup python3 run.py &
+
+Check running processes:
+  ps aux | grep run.py
+  ps aux | grep gunicorn
+
+Terminate processes:
+  kill “<PROCESS NUMBER ID>”
+  
 sudo docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 
-git checkout -b new-branch-name
-git add .
-git commit -m "Description of changes"
-git push origin new-branch-name
-
+Information about the original chatbot and its creator:
 https://codeconfessions.substack.com/p/creating-chatgpt-plugins-using-the#:~:text=The%20function%20call%20feature%20of%20the%20ChatGPT%20API%20allows%20users,help%20to%20perform%20its%20task.
 
+Original chatbot GitHub repository:
 https://github.com/abhinav-upadhyay/chatgpt_plugins
