@@ -85,8 +85,31 @@ Check running processes:
 
 Terminate processes:
   kill “<PROCESS NUMBER ID>”
-  
-sudo docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+
+Use a service like No-IP (https://www.noip.com/) to create a hostname:
+  Create Hostname.
+  Choose a hostname.
+  Insert the IPv4 Public Address.
+
+Access the Nginx configuration file again:
+  sudo vim /etc/nginx/sites-available/chatbot
+
+Modify the server_name line to include the subdomain:
+  server_name 34.239.138.129 monchatbot.ddns.net; # Include subdomain here
+
+Install Docker:
+  sudo apt-get update
+  sudo apt-get install docker.io
+  sudo systemctl start docker
+  sudo systemctl enable docker
+
+Run Jenkins in Docker:
+  sudo docker pull jenkins/jenkins:lts
+  sudo docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+*Insert initial admin password for Jenkins.
+
+Restart Jenkins if stopped:
+  sudo docker restart lucid_satoshi
 
 Information about the original chatbot and its creator:
 https://codeconfessions.substack.com/p/creating-chatgpt-plugins-using-the#:~:text=The%20function%20call%20feature%20of%20the%20ChatGPT%20API%20allows%20users,help%20to%20perform%20its%20task.

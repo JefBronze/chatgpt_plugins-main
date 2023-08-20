@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chat App</title>
+    <title>Chatbot Powered by ChatGPT</title>
+    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
@@ -47,7 +49,7 @@
       }
 
       .input-box input[type="submit"] {
-        background-color: #007bff;
+        background-color: #237a06;
         color: #fff;
         border: none;
         padding: 10px 15px;
@@ -72,7 +74,7 @@
       <div class="input-box">
         <textarea
           id="messageInput"
-          placeholder="Type your message"
+          placeholder="Tapez votre message"
           rows="3"
           cols="100"
         ></textarea>
@@ -90,9 +92,9 @@
 
         function translateRole(role) {
           if (role == "user") {
-            return "You";
+            return "Utilisateur";
           }
-          return "ChatGPT";
+          return "Chatbot";
         }
 
         function renderMessage(sender, message) {
