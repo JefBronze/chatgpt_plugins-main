@@ -1223,3 +1223,9 @@ AttributeError: 'SSLError' object has no attribute 'get'
 127.0.0.1 - - [21/Aug/2023 11:50:17] "[31m[1mPOST / HTTP/1.0[0m" 405 -
 127.0.0.1 - - [21/Aug/2023 12:15:35] "GET / HTTP/1.0" 200 -
 127.0.0.1 - - [21/Aug/2023 12:29:04] "[33mGET /.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [21/Aug/2023 13:05:53] "[33mGET /.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [21/Aug/2023 13:05:53] "[31m[1mPOST / HTTP/1.0[0m" 405 -
+127.0.0.1 - - [21/Aug/2023 13:10:07] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [21/Aug/2023 13:10:08] "GET /static/img/favicon.ico HTTP/1.0" 200 -
+127.0.0.1 - - [21/Aug/2023 13:10:08] "[36mGET /static/img/favicon.ico HTTP/1.0[0m" 304 -
+127.0.0.1 - - [21/Aug/2023 13:10:08] "[36mGET /static/img/favicon.ico HTTP/1.0[0m" 304 -
