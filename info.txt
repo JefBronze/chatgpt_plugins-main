@@ -111,6 +111,10 @@ Run Jenkins in Docker:
 Restart Jenkins if stopped:
   sudo docker restart lucid_satoshi
 
+Create a Pipeline:
+
+Crate a Jenkinsfile:
+
 Information about the original chatbot and its creator:
 https://codeconfessions.substack.com/p/creating-chatgpt-plugins-using-the#:~:text=The%20function%20call%20feature%20of%20the%20ChatGPT%20API%20allows%20users,help%20to%20perform%20its%20task.
 
