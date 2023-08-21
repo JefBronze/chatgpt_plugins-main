@@ -1162,3 +1162,5 @@ AttributeError: 'SSLError' object has no attribute 'get'
 127.0.0.1 - - [20/Aug/2023 23:57:53] "[31m[1mPOST / HTTP/1.0[0m" 405 -
 127.0.0.1 - - [21/Aug/2023 00:29:11] "[31m[1mPOST / HTTP/1.0[0m" 405 -
 127.0.0.1 - - [21/Aug/2023 00:29:12] "[33mGET /.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [21/Aug/2023 01:02:15] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [21/Aug/2023 01:24:16] "[33mGET /.git/config HTTP/1.0[0m" 404 -
