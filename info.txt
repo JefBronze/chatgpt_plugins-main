@@ -115,6 +115,31 @@ Create a Pipeline:
 
 Crate a Jenkinsfile:
 
+Configure HTTPS:
+  sudo apt-get update
+  sudo apt-get install software-properties-common
+  sudo add-apt-repository universe
+  sudo add-apt-repository ppa:certbot/certbot
+  sudo apt-get update
+  sudo apt-get install certbot python3-certbot-nginx
+
+Get a certificate using Certbot:
+  sudo certbot --nginx -d your-domain.com # Replace with your domain
+
+Follow the Prompts:
+  Certbot will guide you through the setup. Choose the options that suit your needs.
+
+Configure HTTPS in Nginx:
+  Certbot should make the necessary adjustments to your Nginx configuration, including adding the required directives for SSL.
+
+Restart Nginx:
+  sudo systemctl reload nginx
+
+Automatic Renewal:
+  Certbot certificates are valid for 90 days, but you can set up automatic renewal with a cron job:
+  sudo crontab -e
+  0 2 * * * /usr/bin/certbot renew --quiet
+
 Information about the original chatbot and its creator:
 https://codeconfessions.substack.com/p/creating-chatgpt-plugins-using-the#:~:text=The%20function%20call%20feature%20of%20the%20ChatGPT%20API%20allows%20users,help%20to%20perform%20its%20task.
 
