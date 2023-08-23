@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chatbot Powered by ChatGPT</title>
+    <title>Chatbot</title>
     <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
     <link
@@ -159,7 +159,7 @@
             .then(response => response.json())
             .then(data => {
               const responseMessage = data.message;
-              renderMessage('ChatGPT', responseMessage);
+              renderMessage('Chatbot Powered by ChatGPT + Brave', responseMessage);
             })
             .catch(error => {
               console.error('Error:', error);

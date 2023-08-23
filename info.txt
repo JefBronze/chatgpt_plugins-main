@@ -1,8 +1,8 @@
 Clone repository from a specific branch:
-  git clone -b branch_name --single-branch https://repository.git
+  git clone -b chatbot --single-branch https://github.com/JefBronze/chatgpt_plugins-main.git
 
 Update Ubuntu:
-  sudo apt-get update
+  sudo apt-get update && sudo apt-get upgrade
 
 Install pip on Ubuntu:
   sudo apt-get install python3-pip
@@ -42,12 +42,6 @@ Create a .env with:
 Run chatbot from command line:
   python3 run.py
 
-Git push to a new branch:
-  git checkout -b new-branch-name
-  git add .
-  git commit -m "Description of changes"
-  git push origin new-branch-name
-
 Install Nginx:
   sudo apt-get update
   sudo apt-get install nginx
@@ -74,21 +68,12 @@ Test the configuration:
   sudo nginx -t
 
 Allow HTTP (port 80):
+  sudo ufw enable
   sudo ufw allow 80/tcp
   sudo ufw reload
 
 Restart Nginx:
   sudo systemctl restart nginx
-
-Keep chatbot running on the background and after log out:
-  nohup python3 run.py &
-
-Check running processes:
-  ps aux | grep run.py
-  ps aux | grep gunicorn
-
-Terminate processes:
-  kill “<PROCESS NUMBER ID>”
 
 Use a service like No-IP (https://www.noip.com/) to create a hostname:
   Create Hostname.
@@ -101,43 +86,50 @@ Access the Nginx configuration file again:
 Modify the server_name line to include the subdomain:
   server_name <Replace with IP_PUBLIC> <Include subdomain here>;
 
-Custom_502 Page:
-  Save the custom_502.html in: /var/www/html
+Configure HTTPS:
+  sudo apt-get update
+  sudo apt-get install software-properties-common
+  sudo add-apt-repository universe
+  sudo add-apt-repository ppa:certbot/certbot
+  sudo apt-get update
+  sudo apt-get install certbot python3-certbot-nginx
+
+Get a certificate using Certbot:
+  sudo certbot --nginx -d mychatbot.sytes.net
+
+Follow the Prompts:
+  Certbot will guide you through the setup. Choose the options that suit your needs.
+
+Configure HTTPS in Nginx:
+  Certbot should make the necessary adjustments to your Nginx configuration, including adding the required directives for SSL.
+
+Allow HTTPS (port 443):
+  sudo ufw allow 443/tcp
+  sudo ufw reload
 
 Update nginx.config file:
-server {
-    server_name mychatbot.sytes.net;
+  check chatbot for final content
 
-    location / {
-        proxy_pass http://localhost:5000;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    }
+Create custom_502 Page:
+  sudo vim /var/www/html/custom_502.html
+  check custom_502.html.txt for final content
 
-    error_page 502 /custom_502.html;
-    location = /custom_502.html {
-        root /var/www/html;
-        internal;
-    }
+Restart Nginx:
+  sudo systemctl reload nginx
 
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/mychatbot.sytes.net/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/mychatbot.sytes.net/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+Automatic Renewal:
+  Certbot certificates are valid for 90 days, but you can set up automatic renewal with a cron job:
+  sudo crontab -e
+  0 2 * * * /usr/bin/certbot renew --quiet
 
-}
-server {
-    if ($host = mychatbot.sytes.net) {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
+Keep chatbot running on the background and after log out:
+  nohup python3 run.py &
 
+Check running processes:
+  ps aux | grep run.py
 
-    listen 80;
-    server_name mychatbot.sytes.net;
-    return 404; # managed by Certbot
-}
+Terminate processes:
+  kill “<PROCESS NUMBER ID>”
 
 Install Docker:
   sudo apt-get update
@@ -153,35 +145,13 @@ Run Jenkins in Docker:
 Create a Pipeline:
 
 Crate a Jenkinsfile:
+  check Jenkinsfile.txt for final content
 
-Configure HTTPS:
-  sudo apt-get update
-  sudo apt-get install software-properties-common
-  sudo add-apt-repository universe
-  sudo add-apt-repository ppa:certbot/certbot
-  sudo apt-get update
-  sudo apt-get install certbot python3-certbot-nginx
-
-Get a certificate using Certbot:
-  sudo certbot --nginx -d your-domain.com # Replace with your domain
-
-Follow the Prompts:
-  Certbot will guide you through the setup. Choose the options that suit your needs.
-
-Configure HTTPS in Nginx:
-  Certbot should make the necessary adjustments to your Nginx configuration, including adding the required directives for SSL.
-
-Allow HTTPS (port 443):
-  sudo ufw allow 443/tcp
-  sudo ufw reload
-
-Restart Nginx:
-  sudo systemctl reload nginx
-
-Automatic Renewal:
-  Certbot certificates are valid for 90 days, but you can set up automatic renewal with a cron job:
-  sudo crontab -e
-  0 2 * * * /usr/bin/certbot renew --quiet
+Git push to a new branch:
+  git checkout -b new-branch-name
+  git add .
+  git commit -m "Description of changes"
+  git push origin new-branch-name
 
 Information about the original chatbot and its creator:
 https://codeconfessions.substack.com/p/creating-chatgpt-plugins-using-the#:~:text=The%20function%20call%20feature%20of%20the%20ChatGPT%20API%20allows%20users,help%20to%20perform%20its%20task.
