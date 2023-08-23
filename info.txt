@@ -20,7 +20,7 @@ Deactivate the virtual Environment:
   deactivate
 
 Install packages in the virtual environment:
-pip install openai --upgrade
+  pip install openai --upgrade
   pip install flask requests python-dotenv
   pip install bs4
 
@@ -73,6 +73,10 @@ Create a symbolic link to the sites-enabled directory:
 Test the configuration:
   sudo nginx -t
 
+Allow HTTP (port 80):
+  sudo ufw allow 80/tcp
+  sudo ufw reload
+
 Restart Nginx:
   sudo systemctl restart nginx
 
@@ -95,7 +99,45 @@ Access the Nginx configuration file again:
   sudo vim /etc/nginx/sites-available/chatbot
 
 Modify the server_name line to include the subdomain:
-  server_name 34.239.138.129 monchatbot.ddns.net; # Include subdomain here
+  server_name <Replace with IP_PUBLIC> <Include subdomain here>;
+
+Custom_502 Page:
+  Save the custom_502.html in: /var/www/html
+
+Update nginx.config file:
+server {
+    server_name mychatbot.sytes.net;
+
+    location / {
+        proxy_pass http://localhost:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    error_page 502 /custom_502.html;
+    location = /custom_502.html {
+        root /var/www/html;
+        internal;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/mychatbot.sytes.net/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/mychatbot.sytes.net/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = mychatbot.sytes.net) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name mychatbot.sytes.net;
+    return 404; # managed by Certbot
+}
 
 Install Docker:
   sudo apt-get update
@@ -107,9 +149,6 @@ Run Jenkins in Docker:
   sudo docker pull jenkins/jenkins:lts
   sudo docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 *Insert initial admin password for Jenkins.
-
-Restart Jenkins if stopped:
-  sudo docker restart lucid_satoshi
 
 Create a Pipeline:
 
@@ -131,6 +170,10 @@ Follow the Prompts:
 
 Configure HTTPS in Nginx:
   Certbot should make the necessary adjustments to your Nginx configuration, including adding the required directives for SSL.
+
+Allow HTTPS (port 443):
+  sudo ufw allow 443/tcp
+  sudo ufw reload
 
 Restart Nginx:
   sudo systemctl reload nginx

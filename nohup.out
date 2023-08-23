@@ -1494,3 +1494,56 @@ OpenAI Response: 127.0.0.1 - - [21/Aug/2023 18:21:12] "POST /chat HTTP/1.0" 200 
 127.0.0.1 - - [21/Aug/2023 19:00:12] "[36mGET /static/img/favicon.ico HTTP/1.0[0m" 304 -
 127.0.0.1 - - [21/Aug/2023 19:03:01] "HEAD / HTTP/1.0" 200 -
 127.0.0.1 - - [21/Aug/2023 19:03:15] "GET / HTTP/1.0" 200 -
+ * Serving Flask app 'app.routes'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.232:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 841-708-044
+127.0.0.1 - - [23/Aug/2023 15:24:12] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [23/Aug/2023 15:24:17] "POST /chat HTTP/1.0" 200 -
+ * Serving Flask app 'app.routes'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.232:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 841-708-044
+127.0.0.1 - - [23/Aug/2023 15:30:46] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [23/Aug/2023 15:31:00] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [23/Aug/2023 15:32:29] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [23/Aug/2023 15:33:44] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [23/Aug/2023 15:33:54] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [23/Aug/2023 15:33:59] "POST /chat HTTP/1.0" 200 -
+ * Serving Flask app 'app.routes'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.232:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 841-708-044
+127.0.0.1 - - [23/Aug/2023 15:48:56] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [23/Aug/2023 15:50:08] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [23/Aug/2023 15:50:23] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [23/Aug/2023 15:53:08] "GET / HTTP/1.0" 200 -
+ * Serving Flask app 'app.routes'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.232:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 841-708-044
+127.0.0.1 - - [23/Aug/2023 15:58:28] "GET / HTTP/1.0" 200 -
