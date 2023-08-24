@@ -1,0 +1,1 @@
+echo 'Bonjour léquipe!! Allons travailler!'
