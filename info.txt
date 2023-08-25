@@ -122,8 +122,11 @@ Automatic Renewal:
   sudo crontab -e
   0 2 * * * /usr/bin/certbot renew --quiet
 
-Keep chatbot running on the background and after log out:
+The command nohup python3 run.py & is designed to run a process in the background, and the nohup part ensures that the process continues running even after you've logged out from the terminal session:
   nohup python3 run.py &
+
+This will send both standard output and standard error to a file called output.log, so you can view the messages at any time by opening that file. If something's being logged, you can watch it in real-time by using a command like 'tail -f output.log':
+  nohup python3 run.py > output.log 2>&1 &
 
 Check running processes:
   ps aux | grep run.py
